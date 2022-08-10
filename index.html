@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+<!--Added bootstrap css link-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!--Added custom font link-->
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">  
+  <link rel="stylesheet" href="./stylesheet.css"/>
+</head>
+
+<body>
+    <div class="topnav">
+        <h1>Weather Dashboard</h1>
+    </div>
+    <!--City Search-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 bg-light">
+                <h3 class="pt-2">Search for a city:</h3>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="city-search">
+                    <div class="append-input-group">
+                        <button class="btn bg-primary text-light" id="search-button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <!--List of searched cities-->
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="list-group" id="city-list">
+                            <li class="list-item"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--Clear city history-->
+                <button onclick="deleteItems()" class="btn btn-primary mt-3" type="button" id="clear-history">Clear Search History</button>
+            </div>
+
+            <!--Weather Info for Searched City-->
+            <div class="col-cm-10 mt-3">
+                <div class="row-sm-10 mx-2 border border-darl rounded">
+                    <div class="col-sm-10 mx-2" id="current-weather">
+                        <p class="City-Name" id="current-city"></p>
+                        <p class="current" id="temp"></p>
+                        <p class="current" id="humidity"></p>
+                        <p class="current" id="wind"></p>
+                        <p class="current" id="uv-index"></p>
+                    </div>
+                </div>
+
+                <!--Week forcast-->
+                <div class="row row-cols-1 row-cols-sm-10 g-4 m-2" id="forcast">
+
+                </div>
+            </div>
+
+        </div>
+        <br>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+
